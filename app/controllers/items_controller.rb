@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.create(name: params[:name], description: params[:description], price: params[:price], real: params[:real], weight: params[:weight])
+    @item = Item.create(params[:item])
     render text: "#{@item.id}: #{@item.name} (#{!@item.new_record?})"
   end
 
