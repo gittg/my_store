@@ -4,12 +4,23 @@ class ItemsController < ApplicationController
     render text: @items.map { |i| "#{i.name}: #{i.price}"}.join("<br/>") 
   end
 
-  def show
-    @item = Item.create(params[:item])
-    render text: "#{@item.id}: #{@item.name} (#{!@item.new_record?})"
-  end
+def show
+end
 
+def new
+end
 
+def edit 
+end
+
+def create
+end
+
+def update
+end
+
+def destroy
+end
 
 
 end
