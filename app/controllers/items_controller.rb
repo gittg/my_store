@@ -4,8 +4,9 @@ def index
   end
 
 def show
-  @item = Item.where(id: params[:id]).first
-  render 'items/show'
+  unless @item = Item.where(id: params[:id]).first
+  render text: "Page not found", status: 404
+end
 end
 
 def new
